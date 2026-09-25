@@ -1,42 +1,68 @@
-О проекте
+Python & AI Engineering Learning Journey 🚀
 
-Здесь собраны практические задания первого дня обучения: от базового синтаксиса Python до работы с файлами и форматом JSON. Каждый файл — это отдельное упражнение, закрепляющее конкретную тему.
+Welcome to my repository! This project serves as a comprehensive log of my progress learning Python from the ground up, moving through data structures, file handling, JSON serialization, and finally stepping into AI Engineering with vector embeddings and local vector databases (ChromaDB and Google Gemini API).
 
-Содержание
+📂 Repository Structure & What's Inside
 
-Файл	Тема
+1. Python Basics & Fundamentals
 
-Hello.py	Первая программа, вывод текста на экран
+Hello.py — My very first step into Python, printing introductory statements as an aspiring AI Engineer.
 
-variables.py	Переменные, типы данных, f-строки
+variables.py — Practice with basic variable types (strings, integers) and formatted strings (f-strings).
 
-condition.py	Условия if / elif / else
+condition.py — Conditional logic (if, elif, else) for age-based classification.
 
-loops.py	Списки, циклы for, функции, словари
+loops.py — Working with lists of dictionaries and iterating through data using for loops and custom functions.
 
-students_file.py	Работа с текстовыми файлами (запись/чтение)
+2. Files & Data Serialization (json)
 
-json_practice.py	Модуль json: сохранение и чтение данных
+students_file.py — Writing and reading structured student data using standard plain text (.txt) files.
 
-Project Day 1.py	Итоговый проект дня — анализатор оценок студентов с сохранением в JSON
+json_practice.py — Introduction to structured data storage using JSON (json.dump and json.load) with UTF-8 encoding support.
 
-students.txt, students.json, report.json	Файлы с данными, сгенерированные скриптами
+Project Day 1.py — A mini-project combining loops, conditional status mapping (grades to text descriptions), JSON file saving, and filtering loaded data.
 
-Итоговый проект дня
+3. AI Engineering & Vector Embeddings
 
-Project Day 1.py объединяет все темы дня в одной программе:
+first_embedding.py — Connecting to the Google Gemini API (gemini-embedding-001) to generate multi-dimensional vector embeddings for text, followed by implementing a mathematical Cosine Similarity function using numpy to compare semantic proximity.
 
-хранит данные студентов в виде списка словарей
-функция с return определяет статус по оценке
-цикл дополняет каждого студента вычисленным статусом
-результат сохраняется в report.json и читается обратно
-фильтрация выводит только студентов со статусом "Отлично"
-Стек
-Python 3.14
-Модуль json (стандартная библиотека)
-Дальше по плану
-Виртуальные окружения и .env
-Прямые вызовы LLM API (Gemini) из Python
-ООП, работа с внешними библиотеками
-RAG и векторные базы данных
-Пет-проекты с деплоем через FastAPI
+chroma_test.py — Setting up a local vector database (ChromaDB) equipped with a custom Gemini embedding function to perform real local semantic search queries over documents.
+
+🛠️ Tech Stack & Libraries
+
+Python 3.x
+
+Google GenAI SDK (google-genai)
+
+ChromaDB (Local vector database)
+
+NumPy (Mathematical operations and vector similarity)
+
+Python-Dotenv (Secure environment variable management)
+
+⚙️ Getting Started & Installation
+
+Clone the repository:
+
+git clone <your-repository-url>
+cd <repository-folder>
+
+
+Install the required packages:
+
+pip install google-genai chromadb numpy python-dotenv
+
+
+Set up your API Key (for AI scripts):
+
+Create a .env file in the root directory.
+
+Add your Google Gemini API key:
+
+GEMINI_API_KEY="your_api_key_here"
+
+
+Run any script:
+
+python "Project Day 1.py"
+python chroma_test.py
